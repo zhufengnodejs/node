@@ -11,7 +11,7 @@
 
 5.git push  origin master
 
-5.git status 看状态：绿色：暂存区
+6.git status 看状态：绿色：暂存区
 
 
 
