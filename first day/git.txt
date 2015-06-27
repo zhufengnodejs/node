@@ -1,9 +1,9 @@
 \\192.168.1.116\share\软件
 
-1.新建目录，进入目录-命令行    git init 到工作区
+1.新建目录，进入目录-命令行-git init 到工作目录
 
 2.工作目录： git add到缓存区
-忽略：.gitignore
+忽略：.gitignore，里面写正则表达式忽略文件名
 
 3.缓存区index  git commit -m "代码提交信息"  到head
 
@@ -21,10 +21,9 @@ git remote add origin https://zhangsan:123456@github.com/zhufengnodejs/201504.gi
 
 
 8.不用输入用户名密码，方法2
-：https://zhangsan:123456@github.com/zhufengnodejs/201504.git
+https://github.com/settings/ssh
 
 9.不用add直接commit:git commit -a -m ""
-
 
 
 webstorm配置git
