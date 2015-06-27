@@ -1,0 +1,22 @@
+\\192.168.1.116\share\软件
+
+1.新建目录，进入目录-命令行    git init 到工作区
+
+2.工作目录： git add到缓存区
+忽略：.gitignore
+
+3.缓存区index  git commit -m "代码提交信息"  到head
+
+4.head git remote add origin 远程推送地址
+
+5.git push  origin master
+
+5.git status 看状态：绿色：暂存区
+
+
+
+
+
+webstorm配置git
+1.VCS-  ENABLE-version
+2.添加后VCS show change view
