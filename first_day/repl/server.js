@@ -12,23 +12,21 @@ function waiter(req,rsp){
     var url=req.url;
 
     var a=url.split("?");
-
     var pathname=a[0];
-    console.log(pathname);
-    var params= a[1];
-
-
-    params=params.split("&");
     var paramsObj={};
-    for(var i in params){
-        var param=params[i];
-        param=param.split("=");
-        paramsObj[param[0]]= param[1];
+    if(url.indexOf("?")>-1){
+        console.log(pathname);
+        var params= a[1];
+        params=params.split("&");
+        for(var i in params){
+            var param=params[i];
+            param=param.split("=");
+            paramsObj[param[0]]= param[1];
+        }
     }
-
-
+    console.log(a[1]);
     if(pathname=="/menu"){
-        rsp.end("<ul><li><a href='/chiken'>黄焖鸡</a></li><li><a href='/leg'>鸡腿饭</a></li></ul>");
+        rsp.end("<ul><li><a href='/chiken?"+a[1]+"' >黄焖鸡</a></li><li><a href='/leg'>鸡腿饭</a></li></ul>");
     }else if(pathname=="/leg"){
         rsp.end("鸡腿饭");
     }else if(pathname=="/chiken"){
