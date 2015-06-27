@@ -9,3 +9,8 @@ recative native swipe
 #为什么
 技术全
 沟通能力
+
+杀进程
+
+netstat -anto | findstr "8080"
+
