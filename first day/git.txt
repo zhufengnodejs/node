@@ -23,6 +23,8 @@ git remote add origin https://zhangsan:123456@github.com/zhufengnodejs/201504.gi
 8.不用输入用户名密码，方法2
 ：https://zhangsan:123456@github.com/zhufengnodejs/201504.git
 
+9.不用add直接commit:git commit -a -m ""
+
 
 
 webstorm配置git
