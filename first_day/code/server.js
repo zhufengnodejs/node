@@ -26,10 +26,10 @@ function waiter(req,rsp){
     }
     console.log(a[1]);
     if(pathname=="/menu"){
-        rsp.end("<ul><li><a href='/chiken?"+a[1]+"' >黄焖鸡</a></li><li><a href='/leg'>鸡腿饭</a></li></ul>");
+        rsp.end("<ul><li><a href='/chicken?"+a[1]+"' >黄焖鸡</a></li><li><a href='/leg'>鸡腿饭</a></li></ul>");
     }else if(pathname=="/leg"){
         rsp.end("鸡腿饭");
-    }else if(pathname=="/chiken"){
+    }else if(pathname=="/chicken"){
         rsp.end("黄焖鸡"+paramsObj["num"]+"份");
     }else{
         rsp.end(pathname);
