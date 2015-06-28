@@ -15,7 +15,6 @@ function waiter(req,rsp){
     var pathname=a[0];
     var paramsObj={};
     if(url.indexOf("?")>-1){
-        console.log(pathname);
         var params= a[1];
         params=params.split("&");
         for(var i in params){
@@ -24,7 +23,6 @@ function waiter(req,rsp){
             paramsObj[param[0]]= param[1];
         }
     }
-    console.log(a[1]);
     if(pathname=="/menu"){
         rsp.end("<ul><li><a href='/chicken?"+a[1]+"' >黄焖鸡</a></li><li><a href='/leg'>鸡腿饭</a></li></ul>");
     }else if(pathname=="/leg"){

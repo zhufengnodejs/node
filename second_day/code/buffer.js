@@ -84,7 +84,7 @@ console.log(buf2.toString());
 
 
 
-/*
+
 //1.先存储后合并
 function concat(arr,length){
     var totalBuf = new Buffer(length);
@@ -104,6 +104,7 @@ function concat(arr,length){
 
 console.log('concat'+concat([buf1,buf2],
     buf1.length+buf2.length).toString());
+
 //使用StringDecoder
 var StringDecoder = require('string_decoder')
     .StringDecoder;
@@ -132,6 +133,8 @@ console.log(buffer.readInt8(3));
 console.log(buffer.readInt16BE(0));//4096
 //console.log(Math.pow(2,12));
 
+
+
 //复制缓存
 //Buffer.copy();
 //target 复制的目标对象
@@ -154,4 +157,3 @@ console.log(Buffer.byteLength('珠峰培训','ascii'));
 
 console.log(Buffer.isEncoding('utf8'));
 console.log(Buffer.isEncoding('GBK'));
-*/
