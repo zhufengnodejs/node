@@ -39,8 +39,12 @@ me.emit("toSchool",7);
 me.emit("toSchool",14);
 me.emit("toUniversity",22);
 me.emit("toUniversity",23);
+//console.log(me.listeners('toSchool'));
+//console.log(EventEmitter.listenerCount(me,'toSchool'));
 me.emit("toSchool",25);
 me.emit("toSchool",28);
+
+
 
 /*
     addListener                     增加监听
@@ -51,3 +55,4 @@ me.emit("toSchool",28);
     emit
     linteners                       查看有多少监听
  */
+
