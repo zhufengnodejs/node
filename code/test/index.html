@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>文件系统</title>
+    <script src="jquery.js"></script>
+    <style>
+
+    </style>
+    <script>
+        var Util = {
+            tmpl: function (str, data, regexp) {
+                return str.replace(regexp || /\\?\{([^{}]+)\}/g, function (match, name) {
+                    return (data[name] === undefined) ? '' : data[name];
+                });
+            }
+        }
+
+        $(function(){
+            var path="";
+            if(location.search){
+                path=location.search.split("=")[1];
+            }
+
+            var $container = $(".fileList");
+            $.ajax({
+                url: "/getFiles",
+                data:{path:path},
+                success:function(data){
+                   if(data&&typeof data==='string'){
+                       data=JSON.parse(data);
+                       var file="<li><a href='{link}' target='_blank'>{type}:{value}</a></li>";
+                       var direction="<li><a href='index.html?link={link}' target='_blank'>{type}:{value}</a></li>";
+                       var lis=new Array();
+                       data.forEach(function(item){
+                           item.type==="文件"&&lis.push(Util.tmpl(file,{type:item.type,value:item.filename,link:item.link}));
+                           item.type==="目录"&&lis.push(Util.tmpl(direction,{type:item.type,value:item.filename,link:item.link}));
+                       });
+                   }
+
+                   $container.html($container.html()+lis.join(""));
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul class="fileList">
+        <li>文件列表:</li>
+    </ul>
+</body>
+</html>

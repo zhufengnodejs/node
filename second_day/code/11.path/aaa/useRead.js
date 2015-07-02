@@ -1,1 +1,0 @@
-var read = require('../read');
