@@ -34,8 +34,8 @@ console.log(buf3.length);
 var newBuf = buf3.slice(0,6);
 console.log(newBuf);
 
-newBuf.write('峰',0,3);
-newBuf.write('峰',3,6);
+newBuf.write('妙',0,3);
+newBuf.write('味',3,6);
 console.log(newBuf.toString());
 console.log(buf3.toString());
 

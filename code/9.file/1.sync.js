@@ -8,12 +8,10 @@ var fs = require('fs');
 //console.log(content);
 
 
-fs.readFile('./1.vmdk','utf-8',function(err,data){
-    console.log('1.vmdk');
-});
-
-fs.readFile('Y:/1.txt','utf-8',function(err,data){
+fs.readFile('./msg.txt','utf-8',function(err,data){
     console.log(data);
 });
 
-console.log('a');
+fs.readFile('Y:/msg.txt','utf-8',function(err,data){
+    console.log(err);
+});
